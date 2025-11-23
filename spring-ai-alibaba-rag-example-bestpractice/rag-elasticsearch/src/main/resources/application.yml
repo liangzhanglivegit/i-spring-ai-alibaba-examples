@@ -1,7 +1,7 @@
 spring:
   # spring elasticsearch配置
   elasticsearch:
-    uris: http://localhost:9200
+    uris: http://47.111.178.112:9200
     username: elastic
     password: esadmin123
   ai:

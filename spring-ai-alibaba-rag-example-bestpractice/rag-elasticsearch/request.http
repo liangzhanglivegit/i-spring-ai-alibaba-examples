@@ -1,0 +1,7 @@
+### Tool
+
+### retrievalHybrid
+GET http://127.0.0.1:8080/rag/retrieval/hybrid
+
+### retrievalHyde
+GET http://127.0.0.1:8080/rag/retrieval/hyde

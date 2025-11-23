@@ -60,6 +60,7 @@
 		<module>spring-ai-alibaba-helloworld</module>
 		<module>spring-ai-alibaba-mcp-example</module>
 		<module>spring-ai-alibaba-rag-example</module>
+		<module>spring-ai-alibaba-rag-example-bestpractice</module>
 		<module>spring-ai-alibaba-chat-example</module>
 		<module>spring-ai-alibaba-audio-example</module>
 		<module>spring-ai-alibaba-video-example</module>
