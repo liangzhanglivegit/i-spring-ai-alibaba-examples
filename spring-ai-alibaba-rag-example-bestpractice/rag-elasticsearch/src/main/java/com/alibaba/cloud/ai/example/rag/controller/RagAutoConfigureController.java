@@ -15,6 +15,7 @@
  */
 package com.alibaba.cloud.ai.example.rag.controller;
 
+import com.alibaba.cloud.ai.example.rag.service.RerankService;
 import com.alibaba.cloud.ai.rag.preretrieval.transformation.HyDeTransformer;
 import com.alibaba.cloud.ai.rag.retrieval.search.HyDeRetriever;
 import com.alibaba.cloud.ai.rag.retrieval.search.HybridElasticsearchRetriever;
@@ -23,6 +24,7 @@ import org.springframework.ai.document.Document;
 import org.springframework.ai.rag.Query;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -44,6 +46,9 @@ public class RagAutoConfigureController {
 
     @Resource
     private HyDeTransformer hyDeTransformer;
+
+    @Resource
+    private RerankService rerankService;
 
     @GetMapping("/retrieval/hybrid")
     public List<Document> retrievalHybrid() {
@@ -67,5 +72,10 @@ public class RagAutoConfigureController {
                 .text("什么是hybridSearch")
                 .build();
         return hyDeTransformer.transform(query);
+    }
+
+    @GetMapping("/rerank/hybrid")
+    public List<Document> rerankHybrid() {
+        return rerankService.retrieveAndRerank("什么是hybridSearch");
     }
 }

@@ -3,5 +3,8 @@
 ### retrievalHybrid（混合检索，目前可以请求成功）
 GET http://127.0.0.1:8080/rag/retrieval/hybrid
 
-### retrievalHyde(假色嵌入，目前还不成功，但暂也不需要该API)
+### rerankHybrid（混合检索 + 重排）
+GET http://127.0.0.1:8080/rag/rerank/hybrid
+
+### 【暂不可用】retrievalHyde(假色嵌入，目前还不成功，但暂也不需要该API)
 GET http://127.0.0.1:8080/rag/retrieval/hyde
